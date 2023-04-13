@@ -45,9 +45,13 @@ function copyToClipboard(text) {
   navigator.clipboard.writeText(text);
 }
 
-function copyTextToClipboard() {
+function copyTextToClipboard(text) {
   copyToClipboard(getResultText());
-  alert("O texto foi copiado!");
+  Swal.fire(
+    'Texto copiado',
+    'Aperte Ok para sair',
+    'success'
+  )
 }
 
 function onEncrypt() {
